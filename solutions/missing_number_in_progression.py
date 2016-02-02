@@ -8,7 +8,7 @@ __author__ = 'yury'
 
 def solution(p):
     new = []
-    step = p[0] - p[1] if p[0] - p[1] == p[1] - p[2] else p[-1] - p[-2]
+    step = p[1] - p[0] if p[0] - p[1] == p[1] - p[2] else p[-1] - p[-2]
     for k in range(p[0], p[-1], step):
         new.append(k)
-    return set(new).difference(set(p)).pop()
+    return list(set(new) - set(p))[0]
