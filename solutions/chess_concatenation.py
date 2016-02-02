@@ -8,7 +8,7 @@ __author__ = 'yury'
 # If one string ends before the other,
 # just continue with the remaining characters.
 
-# Example: 
+# Example:
 # "awbxcydz" == solution("abcd", "wxyz")
 
 def solution1(one, sec):
