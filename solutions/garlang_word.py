@@ -10,8 +10,8 @@ __author__ = 'yury'
 
 def solution(word):
     degree = 0
-    for letter_from_middle in word[:len(word)/2][::-1]:
-        if letter_from_middle == word[::-1][degree]:
+    for letter in word[:len(word) - 1][::-1]:
+        if letter == word[::-1][degree]:
             degree += 1
         else:
             degree = 0
