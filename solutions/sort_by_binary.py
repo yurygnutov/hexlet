@@ -22,3 +22,14 @@ def solution_wrong(sec):
 
 def solution_still_wrong(array):
     return sorted(array, key=lambda x: (list(str(bin(x))).count('1'), array.index(x)))
+
+
+def to_bin(x):
+    if x < 0:
+        x += (1 << 8)
+    formatstring = '{:0%ib}' % 8
+    return formatstring.format(x)
+
+
+def solution(array):
+    return sorted(array, key=lambda x: (list(to_bin(x)).count('1'), array.index(x)))
