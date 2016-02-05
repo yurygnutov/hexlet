@@ -14,3 +14,13 @@ def solution(s, w):
             result.append(len(" ".join(chop + [" ", ])) - 1)
         chop.append(seq.pop(0))
     return result
+
+
+def solution_another(s, w):
+    # Even if there is no hexlet test to fail the solution it is wrong due to
+    # [1, 12] == solution("find a word in some sentence", "in")
+    result = []
+    for i in range(len(s)):
+        if s[i:i + len(w)] == w:
+            result.append(i)
+    return result

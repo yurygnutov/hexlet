@@ -22,3 +22,10 @@ def solution(a, b):
                 return False
     return True
 
+
+def solution_indexes(a, b):
+    return all([a.index(i) == b.index(j) for i,j in zip(a,b)])
+
+
+def solution_indexes_alpha(a, b):
+    return [a.index(i) for i in a] == [b.index(i) for i in b]
