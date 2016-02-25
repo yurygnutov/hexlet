@@ -5,8 +5,12 @@ __author__ = 'yury'
 # Example:
 # "black" == solution("A", 1)
 
-def solution(a, n):
+def solution_old(a, n):
     if a in "ACEG":
         return "black" if n % 2 else "white"
     else:
         return "black" if not n % 2 else "white"
+
+
+def solution(a, b):
+    return "black" if ord(a) % 2 == b % 2 else "white"
