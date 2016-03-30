@@ -8,4 +8,4 @@ __author__ = 'yury'
 # [3,3,3,3,2,2,2,12,12,4,5] == solution([2,3,2,4,5,12,2,3,3,3,12])
 
 def solution(seq):
-    return sorted(seq, key=lambda x: (seq.count(x), -seq.index(x)))[::-1]
+    return sorted(seq, key=lambda x: (-seq.count(x), seq.index(x)))
