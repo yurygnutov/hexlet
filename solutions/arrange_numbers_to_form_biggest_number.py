@@ -22,4 +22,4 @@ def solution_wrong(seq):
 
 def solution(x):
     x = list(map(str, x))
-    return "".join(sorted(x, reverse=True, key=lambda s: s.ljust(max(map(len, x)), "9")))
+    return "".join(sorted(x, reverse=True, key=lambda s: s.ljust(max(map(len, x)), "0")))

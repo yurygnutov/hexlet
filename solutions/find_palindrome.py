@@ -5,7 +5,6 @@ __author__ = 'yury'
 
 # Example: "yzzy" == solution("xyzzy")
 
-import itertools
 
 def is_palindrome(x):
     return x == x[::-1]
